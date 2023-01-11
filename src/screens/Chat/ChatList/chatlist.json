@@ -1,0 +1,26 @@
+[
+    {
+        "documentId": "1",
+        "avatarURL": "",
+        "name": "Missy Landon",
+        "unread": true,
+        "msg": "Nice Picture, looks lovely!",
+        "date": "12:45 PM"
+    },
+    {
+        "documentId": "2",
+        "avatarURL": "",
+        "name": "Jessica Cross",
+        "unread": true,
+        "msg": "Nice Picture, looks lovely!",
+        "date": "12:45 PM"
+    },
+    {
+        "documentId": "3",
+        "avatarURL": "",
+        "name": "Rutherford Brannan",
+        "unread": false,
+        "msg": "Nice Picture, looks lovely!",
+        "date": "12:45 PM"
+    }
+]

@@ -1,0 +1,38 @@
+diff --git a/node_modules/react-native-floating-label-input/src/index.tsx b/node_modules/react-native-floating-label-input/src/index.tsx
+index 7b2733b..75eee22 100644
+--- a/node_modules/react-native-floating-label-input/src/index.tsx
++++ b/node_modules/react-native-floating-label-input/src/index.tsx
+@@ -26,6 +26,7 @@ import makeVisibleWhite from './assets/make_visible_white.png';
+ import makeInvisibleWhite from './assets/make_invisible_white.png';
+ import makeVisibleBlack from './assets/make_visible_black.png';
+ import makeInvisibleBlack from './assets/make_invisible_black.png';
++import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
+ 
+ export interface Props extends TextInputProps {
+   /** Style to the container of whole component */
+@@ -92,6 +93,8 @@ export interface Props extends TextInputProps {
+   rightComponent?: JSX.Element;
+   /** Set custom animation duration. Default 300 ms */
+   animationDuration?: number;
++
++  isMandatory? :boolean;
+ }
+ 
+ export interface SetGlobalStyles {
+@@ -197,6 +200,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
+     value = '',
+     onSelectionChange,
+     animationDuration,
++    isMandatory,
+     ...rest
+   },
+   ref,
+@@ -725,7 +729,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
+                   },
+                 ]}
+               >
+-                {label}
++                {label} {isMandatory && <AnimatedText style={{color:'#DF5A56'}}>{'*'}</AnimatedText> }
+               </AnimatedText>
+             )}
+             <TextInput

@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "target": "Popular",
+    "title": "Popular",
+    "name": "fire",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 2,
+    "target": "Groups",
+    "title": "Groups",
+    "name": "Groups",
+    "type": "Groups",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 3,
+    "target": "Events",
+    "title": "Events",
+    "name": "calendar",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 4,
+    "target": "Help",
+    "title": "Personalities",
+    "name": "md-star-outline",
+    "type": "Ionicons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 5,
+    "target": "ConnectWithPeople",
+    "title": "Connections",
+    "name": "link",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 6,
+    "target": "ControlMyContent",
+    "title": "Control My Content",
+    "name": "shield",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 7,
+    "target": "EditProfile",
+    "title": "Edit Profile",
+    "name": "user",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 8,
+    "target": "RecentActivity",
+    "title": "Recent Activity",
+    "name": "clock",
+    "type": "SimpleLineIcons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 9,
+    "target": "Settings",
+    "title": "Settings",
+    "name": "settings-outline",
+    "type": "Ionicons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 10,
+    "target": "Help",
+    "title": "Help & Support",
+    "name": "help-buoy-outline",
+    "type": "Ionicons",
+    "size": 24,
+    "visible": true
+  },
+  {
+    "id": 11,
+    "target": "BusinessPages",
+    "title": "Business Pages",
+    "name": "md-business-outline",
+    "type": "Ionicons",
+    "size": 24,
+    "visible": false
+  }
+]

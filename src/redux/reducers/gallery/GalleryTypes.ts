@@ -1,0 +1,4 @@
+export enum GalleryTypes {
+  OPENGALLERY = 'OPENGALLERY',
+  HIDEGALLERY = 'HIDEGALLERY',
+}

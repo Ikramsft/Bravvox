@@ -1,0 +1,92 @@
+diff --git a/node_modules/react-native-keyboard-accessory/KeyboardAccessoryNavigation.js b/node_modules/react-native-keyboard-accessory/KeyboardAccessoryNavigation.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/KeyboardAccessoryView.js b/node_modules/react-native-keyboard-accessory/KeyboardAccessoryView.js
+old mode 100644
+new mode 100755
+index 22a20a5..0ea4415
+--- a/node_modules/react-native-keyboard-accessory/KeyboardAccessoryView.js
++++ b/node_modules/react-native-keyboard-accessory/KeyboardAccessoryView.js
+@@ -91,9 +91,14 @@ class KeyboardAccessoryView extends Component {
+       const { animationConfig, animateOn } = this.props;
+ 
+       if (animateOn === 'all' || Platform.OS === animateOn) {
+-        LayoutAnimation.configureNext(
+-          accessoryAnimation(keyboardEvent.duration, keyboardEvent.easing, animationConfig)
+-        );
++        if(!this.state.animating){
++          this.setState({animating: true});
++          LayoutAnimation.configureNext(
++            accessoryAnimation(keyboardEvent.duration, keyboardEvent.easing, animationConfig),
++            () => this.setState({animating: false}),
++            () => this.setState({animating: false}),
++          );
++        }
+       }
+ 
+       this.setState({
+@@ -121,9 +126,14 @@ class KeyboardAccessoryView extends Component {
+     const { animateOn, animationConfig } = this.props;
+ 
+     if (animateOn === 'all' || Platform.OS === animateOn) {
+-      LayoutAnimation.configureNext(
+-        animationConfig || accessoryAnimation(keyboardEvent.duration, keyboardEvent.easing, animationConfig)
+-      );
++      if(!this.state.animating){
++        this.setState({animating: true});
++        LayoutAnimation.configureNext(
++          animationConfig || accessoryAnimation(keyboardEvent.duration, keyboardEvent.easing, animationConfig),
++          () => this.setState({animating: false}),
++          () => this.setState({animating: false}),
++        );
++      }
+     }
+ 
+     this.setState({
+@@ -154,8 +164,15 @@ class KeyboardAccessoryView extends Component {
+       children,
+     } = this.props;
+ 
+-    const visibleHeight = accessoryHeight + (avoidKeyboard ? keyboardHeight : 0);
+     const applySafeArea = isSafeAreaSupported && inSafeAreaView;
++
++    const visibleHeight =
++       accessoryHeight
++       + (avoidKeyboard ? keyboardHeight : 0)
++       - (isKeyboardVisible ? bumperHeight + (applySafeArea ? 20 : 0) : 0);
++
++       console.log('visibleHeight->', visibleHeight);
++
+     const isChildRenderProp = typeof children === "function";
+ 
+     return (
+diff --git a/node_modules/react-native-keyboard-accessory/KeyboardAwareTabBarComponent.js b/node_modules/react-native-keyboard-accessory/KeyboardAwareTabBarComponent.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/LICENSE b/node_modules/react-native-keyboard-accessory/LICENSE
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/README.md b/node_modules/react-native-keyboard-accessory/README.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/components/AccessoryArrowButton/index.js b/node_modules/react-native-keyboard-accessory/components/AccessoryArrowButton/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios.png b/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios@2x.png b/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios@2x.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios@3x.png b/node_modules/react-native-keyboard-accessory/components/Arrow/arrow.ios@3x.png
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/components/Arrow/index.js b/node_modules/react-native-keyboard-accessory/components/Arrow/index.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/index.d.ts b/node_modules/react-native-keyboard-accessory/index.d.ts
+old mode 100644
+new mode 100755
+diff --git a/node_modules/react-native-keyboard-accessory/index.js b/node_modules/react-native-keyboard-accessory/index.js
+old mode 100644
+new mode 100755

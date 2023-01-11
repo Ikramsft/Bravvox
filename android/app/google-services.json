@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "240607594075",
+    "project_id": "bravvox-dbaf8",
+    "storage_bucket": "bravvox-dbaf8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240607594075:android:a9022ed2c1648ed9e6e17e",
+        "android_client_info": {
+          "package_name": "com.bravvoxmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240607594075-3j80f761s8dtr0fbcc3lmmqle7uc1qs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk9Y-yDbyh1RY8aYjn-x5yi6ndkLGdHc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240607594075-3j80f761s8dtr0fbcc3lmmqle7uc1qs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

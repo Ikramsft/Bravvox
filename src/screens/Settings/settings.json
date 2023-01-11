@@ -1,0 +1,12 @@
+[
+  {"id": "account_details", "title": "Account Details"},
+  {"id": "security", "title": "Security"},
+  {"id": "privacy", "title": "Privacy"},
+  {"id": "notifications", "title": "Notifications"},
+  {"id": "manage_subscriptions", "title": "Manage Subscriptions"},
+  {"id": "manage_groups", "title": "Manage My Groups"},
+  {"id": "manage_events", "title": "Manage My Events"},
+  {"id": "manage_business", "title": "Manage My Business"},
+  {"id": "invite", "title": "Invite Friends"},
+  {"id": "theme", "title": "Theme"}
+]

@@ -1,0 +1,55 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    gradle(task: "clean assembleRelease")
+    crashlytics
+  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+
+  desc "Deploy a new version to the Firebase distribution Play"
+  lane :distribute do
+    increment_version_code(
+        gradle_file_path: “app/build.gradle”
+    )
+
+    #gradle(task: “clean assembleRelease”)
+
+    gradle(task: 'assemble', build_type: 'Release') # build_android_app is a built-in fastlane action.
+
+    firebase_app_distribution(
+        app: "1:240607594075:android:a9022ed2c1648ed9e6e17e",
+        service_credentials_file: "bravvox_firebase_credentials.json",
+        groups: "Bravvox-team"
+    )
+  end
+end

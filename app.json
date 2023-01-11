@@ -1,0 +1,17 @@
+{
+  "name": "BravvoxMobile",
+  "displayName": "Bravvox",
+  "expo": {
+    "name": "Bravvox",
+    "owner": "ravi-poonia",
+    "slug": "bravvox",
+    "sdkVersion": "44.0.0",
+    "jsEngine": "hermes",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "runtimeVersion": {
+      "policy": "nativeVersion"
+    }
+  }
+}

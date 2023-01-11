@@ -1,0 +1,7 @@
+<svg id="image-close-hover-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <circle id="Ellipse_174" data-name="Ellipse 174" cx="8" cy="8" r="8" fill="#1a1a1a"/>
+  <g id="close_black_24dp" transform="translate(0.033)">
+    <path id="Path_1166" data-name="Path 1166" d="M0,0H15.966V15.966H0Z" fill="none"/>
+    <path id="Path_1167" data-name="Path 1167" d="M11.685,5.673,11.012,5,8.343,7.669,5.673,5,5,5.673,7.669,8.343,5,11.012l.673.673L8.343,9.016l2.669,2.669.673-.673L9.016,8.343Z" transform="translate(-0.359 -0.359)" fill="#fff"/>
+  </g>
+</svg>

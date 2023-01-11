@@ -1,0 +1,4 @@
+export enum FullScreenPostTypes {
+  OPENPOSTVIEW = 'OPENPOSTVIEW',
+  HIDEPOSTVIEW = 'HIDEPOSTVIEW',
+}
